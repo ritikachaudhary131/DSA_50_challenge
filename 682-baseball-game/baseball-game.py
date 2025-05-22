@@ -11,7 +11,7 @@ class Solution:
                 lst.append(lst[-1]*2)#last element ko double krke list m add krdo
 
             elif i == '+':
-                lst.append(lst[-1]+lst[-2])#score add krdo second last tk fr append
+                lst.append(lst[-1]+lst[-2])#score add krke show krdo 
             else:
-                lst.append(int(i))#last ko show krdo
+                lst.append(int(i))#string ko int m convert krke chrd do
         return sum(lst)
