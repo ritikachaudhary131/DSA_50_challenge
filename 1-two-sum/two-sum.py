@@ -1,10 +1,8 @@
 class Solution:
-    """sum of two numbers"""
     def twoSum(self, nums, target):
-        num_to_index = {}
+        seen = {}
         for i, num in enumerate(nums):
-            complement = target - num
-            if complement in num_to_index:
-                return [num_to_index[complement], i]
-            num_to_index[num] = i
-        
+            diff = target - num
+            if diff in seen:
+                return [seen[diff], i]
+            seen[num] = i
